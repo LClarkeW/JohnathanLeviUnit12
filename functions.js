@@ -16,7 +16,7 @@ function displayEverything(inputId, outputId,output1Id,output2Id) {
     catch (error) {
         console.log(error.message);
         outputText = error.message;
-    document.getElementById(outputId).innerHTML = outputText;
+    }
 
     try {
         outputTextCO = "Your CO code is " + COC;
@@ -24,7 +24,7 @@ function displayEverything(inputId, outputId,output1Id,output2Id) {
     catch (error) {
         console.log(error.message);
         outputTextCO = error.message;
-    document.getElementById(output1Id).innerHTML = outputTextCO;
+
 
     try {
         outputTextLine = "Your Line code is " + line;
@@ -32,8 +32,12 @@ function displayEverything(inputId, outputId,output1Id,output2Id) {
     catch (error) {
         console.log(error.message);
         outputTextLine = error.message;
-    document.getElementById(output2Id).innerHTML = outputTextLine;
+
     }
+}
+        document.getElementById(outputId).innerHTML = outputText;
+        document.getElementById(output2Id).innerHTML = outputTextLine;
+        document.getElementById(output1Id).innerHTML = outputTextCO;
 }
 
 function getAreaCode(phoneNum) {
